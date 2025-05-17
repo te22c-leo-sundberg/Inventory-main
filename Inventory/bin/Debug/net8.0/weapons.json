@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "Sword",
+    "MinDamage": 2,
+    "MaxDamage": 7
+  },
+  {
+    "Name": "Battleaxe",
+    "MinDamage": 5,
+    "MaxDamage": 15
+  },
+  {
+    "Name": "Dagger",
+    "MinDamage": 3,
+    "MaxDamage": 9
+  }
+]

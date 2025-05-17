@@ -1,0 +1,23 @@
+[
+    {
+        "Protection": 0.7,
+        "Speed": 0.2,
+        "AttackBoost": 2,
+        "Name": "Spikey Hat",
+        "Weight": 2.5
+    },
+    {
+        "Protection": 0.5,
+        "Speed": 1.0,
+        "AttackBoost": 2,
+        "Name": "Leather Cap",
+        "Weight": 1.0
+    },
+    {
+        "Protection": 0.7,
+        "Speed": 0.2,
+        "AttackBoost": 2,
+        "Name": "Fedora",
+        "Weight": 2.5
+    }
+]
