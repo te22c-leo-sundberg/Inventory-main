@@ -12,7 +12,7 @@ class Player : Character
     {
         Mana = mana;
     }
-    public override int Attack()
+    public override int Attack() //Overrides the character virtual int to also double the attack int generated from it, then says a text for how much damage you dealt.
     {
         int attack = base.Attack() * 2;
         Console.WriteLine(GetName() + " swung their sword at the monster for " + attack + " damage.");
@@ -30,7 +30,7 @@ class Player : Character
         MaxAttack = maxAttack;
     }
 
-    public bool CanPickUp(float target)
+    public bool CanPickUp(float target) //Checks if the player has enough capacity to pick an item up, this is unused and old though.
     {
         if (CurrentCarryWeight + target > CarryCapacity)
         {

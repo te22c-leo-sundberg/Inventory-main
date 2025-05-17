@@ -2,10 +2,11 @@ using System.Text.Json.Serialization;
 class Enemy : Character
 {
 
-    public override int Attack()
+    public override int Attack() //overrides the virtual attack in character to also do a write line for the monsters attack. 
     {
-        Console.WriteLine(GetName() + " body scratched you for " + base.Attack() + " damage.");
-        return base.Attack();
+        int attack = base.Attack();
+        Console.WriteLine(GetName() + " body scratched you for " + attack + " damage.");
+        return attack;
     }
 
     public Enemy() { }
