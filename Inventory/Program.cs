@@ -12,7 +12,8 @@ bool gameLoop = true;
 MapMover m = new();
 Combat c = new();
 Player player = new("Player", 100, 25, 4.5f, 4, 8);
-Enemy enemy = new("John John", 100, 3, 6);
+Enemy enemy1 = new("Crawler", 100, 3, 6);
+Bulky enemy2 = new("Unpredictable", 100, 3, 6, 2, 5);
 Inventory i = new();
 
 while (gameLoop) //Runs the main methods and codes for my game
@@ -23,10 +24,22 @@ while (gameLoop) //Runs the main methods and codes for my game
     }
     else if (m.GetGameState() == "Combat")
     {
-        c.CombatLoop(player, enemy);
-        if (enemy.GetHealth() <= 0) //Switches loop if enemy dies. Simple code to end the combat loop, I don't want to complicate this code any more than I have. 
+        int chance = Random.Shared.Next(2, 3);
+        if (chance == 1)
         {
-            m.UpdateGameState("Map");
+            c.CombatLoop(player, enemy1);
+            if (enemy1.GetHealth() <= 0) //Switches loop if enemy dies. Simple code to end the combat loop, I don't want to complicate this code any more than I have. 
+            {
+                m.UpdateGameState("Map");
+            }
+        }
+        else
+        {
+            c.CombatLoop(player, enemy2);
+            if (enemy2.GetHealth() <= 0) //Switches loop if enemy dies. Simple code to end the combat loop, I don't want to complicate this code any more than I have. 
+            {
+                m.UpdateGameState("Map");
+            }
         }
     }
 }

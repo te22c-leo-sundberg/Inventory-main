@@ -42,3 +42,4 @@ c:\Users\Leosu\Documents\Programming\Final Project\Inventory-main\Inventory\obj\
 c:\Users\Leosu\Documents\Programming\Final Project\Inventory-main\Inventory\obj\Debug\net8.0\Inventory.pdb
 c:\Users\Leosu\Documents\Programming\Final Project\Inventory-main\Inventory\obj\Debug\net8.0\Inventory.genruntimeconfig.cache
 c:\Users\Leosu\Documents\Programming\Final Project\Inventory-main\Inventory\obj\Debug\net8.0\ref\Inventory.dll
+c:\Users\Leosu\Documents\Programming\Final Project\Inventory-main\Inventory\obj\Debug\net8.0\Inventory.sourcelink.json

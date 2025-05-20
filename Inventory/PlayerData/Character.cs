@@ -34,17 +34,21 @@ class Character
             Hp += additionalHealth;
         }
     }
-    public void TakeDamage(int damage) //Same as the one above except it subtracts. Cannot go below 0 in health.
+    public virtual int DamageTaken(int damage)
     {
-        Console.WriteLine(damage);
-        if (Hp - damage < 0)
+        return damage;
+    }
+    public void TakeDamage(int damageTaken) //Same as the one above except it subtracts. Cannot go below 0 in health.
+    {
+        Console.WriteLine(damageTaken);
+        if (Hp - damageTaken < 0)
         {
             Console.WriteLine(GetName() + " died.");
             Hp = 0;
         }
         else
         {
-            Hp -= damage;
+            Hp -= damageTaken;
             Console.WriteLine(GetName() + " now has " + Hp + " health left.");
         }
     }

@@ -3,7 +3,7 @@ class Combat
     List<Enemy> Enemies = [];
     bool CombatStart = true;
 
-    public void CombatLoop(Player player, Enemy enemy)
+    public void CombatLoop(Character player, Character enemy)
     {
         if (CombatStart)//Runs only at the start of combat then makes combatStart false. I would then add some code at the end of combat that makes it true again.
         {
@@ -14,12 +14,13 @@ class Combat
         int input = GetInt("What do you wish to do? Attack = [1]", 1, 1);
         if (input == 1)
         {
-            enemy.TakeDamage(player.Attack());
+            enemy.TakeDamage(enemy.DamageTaken(player.Attack()));
         }
         if (enemy.GetHealth() > 0)
         {
 
         }
+        player.TakeDamage(player.DamageTaken(enemy.Attack()));
     }
 
     int GetInt(string text, int minNum, int maxNum)//Uses tryparse to get an int, and continuously runs this code until you choose a valid option. Each failed time will tell you what you did wrong.
